@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Form</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background:  #fff;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #8fe5ff;
+      border-radius: 10px;
+      padding: 20px 30px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #f1f1f1;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    input, textarea {
+      background-color: rgba(255, 255, 255, 0.8);
+      color: #333;
+      border: 2px solid #000000;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border: 2px solid #0984e3;
+    }
+
+    button {
+      background-color: #0984e3;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #078f07;
+    }
+
+    @media (max-width: 500px) {
+      body {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Order Form</h2>
+    <form id="orderForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required placeholder="Enter your name">
+
+      <label for="mobile">Mobile Number:</label>
+      <input type="tel" id="mobile" required pattern="[0-9]{10}" placeholder="Enter 10-digit number">
+
+      <label for="address">Address:</label>
+      <textarea id="address" rows="3" required placeholder="Enter your address"></textarea>
+
+      <label for="order">Order Details:</label>
+      <textarea id="order" rows="3" required placeholder="Enter your order"></textarea>
+
+      <label for="total">Total Price:</label>
+      <input type="number" id="total" required placeholder="Enter total price">
+
+      <button type="submit">Send</button>
+    </form>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
